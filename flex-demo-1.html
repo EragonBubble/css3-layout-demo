@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+	1. 教程：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+	2. 实践: http://static.vgee.cn/static/index.html
+	3. 传送门: https://github.com/JailBreakC/flex-box-demo
+-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flex布局</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			body{
+				padding: 0;
+				margin: 0;
+			}
+			.main{
+				display: flex;
+				flex-direction: row; /* row | row-reverse | column | column-reverse; */
+				flex-wrap: wrap; /* nowrap | wrap | wrap-reverse; */
+				/*flex-flow: row nowrap; *//* <flex-direction> || <flex-wrap>; */
+				justify-content: flex-start; /*flex-start | flex-end | center | space-between | space-around;*/
+				align-items: stretch; /*flex-start | flex-end | center | baseline | stretch;*/
+			}
+			.item{
+				display: inline-flex;
+				width: 5rem;
+				border: 1px dotted lightgreen;
+				background-color: lightgoldenrodyellow;
+			}
+			.item.first{
+				order: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="item">
+				1
+			</div>
+			<div class="item">
+				2
+			</div>
+			<div class="item first">
+				3
+			</div>
+			<div class="item">
+				4
+			</div>
+			<div class="item">
+				5
+			</div>
+			<div class="item">
+				6
+			</div>
+			<div class="item">
+				7
+			</div>
+			<div class="item">
+				8
+			</div>
+			<div class="item">
+				9
+			</div>
+		</div>
+	</body>
+</html>
